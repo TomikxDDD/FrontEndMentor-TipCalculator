@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+:root {
+
+  --clr-primary: hsl(172, 67%, 45%);
+  --clr-primary-dark: hsl(183, 100%, 15%);
+  --clr-primary-gray: hsl(186, 14%, 43%);
+  --clr-primary-light-gray-200: hsl(184, 14%, 56%);
+  --clr-primary-light-gray-500: hsl(185, 41%, 84%);
+  --clr-primary-light-gray-900: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  width: 100%;
+}
+
+/*  Remove arrows from inputs of type number  */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body{
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: var(--clr-primary-light-gray-500);
+
+  font-family: "Space Mono", sans-serif;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  
+  color-scheme: light dark;
+}
+
+/* Reusable components */
+
+.btn{
+  border: none;
+  border-radius: 0.25rem;
+
+  padding: 0.5em 0;
+
+  text-align: center;
+
+  font-family: "Space Mono", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  
+  cursor: pointer;
+}
+
+.app-name{
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--clr-primary-dark);
+  margin-bottom: 3em;
+}
+
+.card{
+  padding: 1em;
+  background-color: var(--clr-white);
+  border-radius: 1.5em;
+  box-shadow: 0.5rem 0.5rem 1rem 0rem var(--clr-primary-gray)
+}
+
+.input-section{
+  padding: 0.5em;
+}
+
+.form-label{
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+}
+
+.input{
+  color: var(--clr-primary-dark);
+  background-color: var(--clr-primary-light-gray-900);
+  border: none;
+  padding: 0.25em 1em;
+  font-family: "Space Mono", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+}
+
+.input::placeholder{
+    color: var(--clr-primary-dark);
+}
+
+.input:hover,
+.input:active,
+.input:focus {
+  outline: 2px solid var(--clr-primary);
+}
+
+.form-input{
+  width: 100%;
+  text-align: right;
+  margin-bottom: 1em;
+}
+
+.tip-buttons-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1em;
+}
+
+.btn-tip{
+  background-color: var(--clr-primary-dark);
+  color: var(--clr-white);
+  width: 100%;
+}
+
+.btn-tip-input{
+  text-align: center;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Result section */
+
+.result-section{
+  height: 100%;
+  background-color: var(--clr-primary-dark);
+  padding: 2em 1.5em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-amount-container{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 0.75em;
+}
+
+.result-amount-title p{
+  color: var(--clr-white);
+  font-size: 1rem;
+}
+
+.result-amount-title span{
+  display: block;
+  color: var(--clr-primary-light-gray-200);
+  font-size: 0.8rem;
+}
+
+.result-amount-price{
+  color: var(--clr-primary);
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.btn-reset{
+  color: var(--clr-primary-dark);
+  background-color: var(--clr-primary);
+  text-transform: uppercase;
+}
+
+@media (min-width: 900px){
+  .container{
+    width: min(80%, 1200px);
+    margin: 0 auto;
+  }
+  
+  .card{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .column{
+    width: 48%;
+  }
+}
+
