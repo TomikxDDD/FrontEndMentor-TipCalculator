@@ -6,7 +6,7 @@ const InputSection = ({ bill, setBill, tip, setTip, numOfPeople, setNumOfPeople 
   const [customTipFieldFocused, setCustomTipFieldFocused] = useState(false)
 
   const onCustomTipFieldFocus = () => {
-    setTip(0)
+    // setTip('')
     setCustomTipFieldFocused(true)
   }
   
@@ -35,10 +35,11 @@ const InputSection = ({ bill, setBill, tip, setTip, numOfPeople, setNumOfPeople 
 
   let customTipValue;
 
-  if (customTipFieldFocused) {
-    customTipValue = tip * 100;
-  } else if (!customTipFieldFocused || (tip === 0 || tip === 0.05 || tip === 0.10 || tip === 0.15 || tip === 0.20 || tip === 0.50)){
+  if (!customTipFieldFocused && (tip === 0 || tip === 0.05 || tip === 0.10 || tip === 0.15 || tip === 0.20 || tip === 0.50)) {
     customTipValue = '';
+  } else {
+    customTipValue = tip * 100;
+    
   }
 
   return ( 
