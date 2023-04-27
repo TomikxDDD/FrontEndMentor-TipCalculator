@@ -92,8 +92,11 @@ body{
 .form-label{
   display: block;
   text-align: left;
+  color: var(--clr-primary-dark);
   font-size: 1rem;
+  font-weight: 700;
   margin-bottom: 0.5em;
+
 }
 
 .input{
@@ -117,6 +120,16 @@ body{
   outline: 2px solid var(--clr-primary);
 }
 
+.input-invalid{
+  outline: 2px solid #f77373f5;
+}
+
+.input-invalid:hover,
+.input-invalid:active,
+.input-invalid:focus {
+  outline: 2px solid #f77373f5;
+}
+
 .form-input{
   width: 100%;
   text-align: right;
@@ -135,6 +148,11 @@ body{
   background-color: var(--clr-primary-dark);
   color: var(--clr-white);
   width: 100%;
+}
+
+.btn-tip-selected{
+  background-color: var(--clr-primary);
+  color: var(--clr-primary-dark);
 }
 
 .btn-tip-input{

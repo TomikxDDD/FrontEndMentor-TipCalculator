@@ -1,7 +1,13 @@
-const TipBtn = ({text}) => {
+const TipBtn = ({text, onClick, selected}) => {
+  
+  let btnClassName = "btn btn-tip" + ' ' + (selected ? 'btn-tip-selected' : '')
+
   return ( 
-    <button className="btn btn-tip">{text}</button>
-   );
+    <button 
+      type="button" 
+      className={btnClassName}
+      onClick={onClick}>{text}</button>
+   ); 
 }
  
 export default TipBtn;
