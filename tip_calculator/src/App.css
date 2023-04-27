@@ -204,6 +204,12 @@ body{
   text-transform: uppercase;
 }
 
+/* Footer */
+
+.attribution{
+  margin-top: 2em;
+}
+
 @media (min-width: 900px){
   .container{
     width: min(80%, 1200px);
